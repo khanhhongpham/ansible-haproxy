@@ -13,3 +13,7 @@ defaults
 {% include 'frontend.cfg.j2' %}
 
 {% include 'backend.cfg.j2' %}
+resolvers consul
+  nameserver consul 127.0.0.1:8600
+  accepted_payload_size 8192
+  hold valid 5s
